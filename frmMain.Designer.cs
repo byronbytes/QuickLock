@@ -29,6 +29,7 @@ namespace QuickLock
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,6 +37,7 @@ namespace QuickLock
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.giveWarningMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,8 +87,6 @@ namespace QuickLock
             // 
             // toolStripMenuItem2
             // 
-            this.toolStripMenuItem2.Checked = true;
-            this.toolStripMenuItem2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(194, 22);
             this.toolStripMenuItem2.Text = "Show on Top";
@@ -97,6 +97,12 @@ namespace QuickLock
             this.giveWarningMessageToolStripMenuItem.Name = "giveWarningMessageToolStripMenuItem";
             this.giveWarningMessageToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.giveWarningMessageToolStripMenuItem.Text = "Give Warning Message";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMain
             // 
@@ -125,6 +131,7 @@ namespace QuickLock
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem giveWarningMessageToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

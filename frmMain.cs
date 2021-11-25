@@ -42,10 +42,7 @@ namespace QuickLock
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            bool isChecked = false;
-
-    
-           if(toolStripMenuItem2.Checked)
+           if(toolStripMenuItem2.Checked == true)
             {
                 Properties.Settings.Default.ShowOnTop = true;
             }
@@ -53,10 +50,10 @@ namespace QuickLock
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-               if(Properties.Settings.Default.ShowOnTop == true)
-              {
-                  this.SetTopLevel(true);
-              }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
         }
     }
 }
