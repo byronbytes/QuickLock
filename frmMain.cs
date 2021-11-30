@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,16 +17,6 @@ namespace QuickLock
         public frmMain()
         {
             InitializeComponent();
-
-         //   if(Properties.Settings.Default.ShowOnTop == true)
-          //  {
-          //      this.SetTopLevel(true);
-          //  }
-
-         //   if (Properties.Settings.Default.ShowOnTop == false)
-          //  {
-          //      this.SetTopLevel(false);
-          //  }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,25 +26,22 @@ namespace QuickLock
                 MessageBox.Show("This may close work, so please save your work before continuing.");
             }
 
-
             Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         } 
 
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-           if(toolStripMenuItem2.Checked == true)
-            {
-                Properties.Settings.Default.ShowOnTop = true;
-            }
-        }
-
         private void frmMain_Load(object sender, EventArgs e)
         {
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //todo: Keybind.
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
