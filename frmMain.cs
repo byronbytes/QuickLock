@@ -21,12 +21,12 @@ namespace QuickLock
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(Properties.Settings.Default.WarningMessage == true)
+            if (Properties.Settings.Default.WarningMessage == true)
             {
                 MessageBox.Show("Please save your work before continuing.");
             }
             Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
-        } 
+        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -35,16 +35,16 @@ namespace QuickLock
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //Check for WIN + L and when clicked, immediately locks device.
-            
+
         }
-        
+
         // Doing this on a chromebook.
         private void KeyDown(KeyEventArgs e)
-     {
-              if (e.KeyCode == Keys.WINL || Keys.L)
+        {
+            if (e.KeyCode == Keys.LWin)
             {
-            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+                Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
             }
+        }
     }
 }
