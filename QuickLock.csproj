@@ -6,6 +6,9 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Company>LiteTools</Company>
     <Authors>Matty</Authors>
+    <Version>1.1.0</Version>
+    <Description>An application to quickly lock your computer.</Description>
+    <ApplicationIcon>QuickLock New.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

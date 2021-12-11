@@ -23,8 +23,9 @@ namespace QuickLock
         {
             if (Properties.Settings.Default.WarningMessage == true)
             {
-                MessageBox.Show("Please save your work before continuing.");
+                MessageBox.Show("Please save your work before continuing. Clicking OK will lock your computer.");
             }
+
             Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
 
@@ -68,6 +69,12 @@ namespace QuickLock
             {
                 keyL = false;
             }
+        }
+
+        private void giveWarningMessageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.WarningMessage = true;
+            Properties.Settings.Default.Save();
         }
     }
 }
