@@ -30,20 +30,43 @@ namespace QuickLock
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            if (keyL && keyWIN)
+            {
+                Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            }
+               
         }
 
-        // Doing this on a chromebook.
-        private void KeyDown(KeyEventArgs e)
+        bool keyL = false;
+        bool keyWIN = false;
+
+        private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.LWin)
             {
-                Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+                    keyWIN = true;
+            }
+            else if (e.KeyCode == Keys.L)
+            {
+                keyL = true;
+            }
+        }
+
+        private void frmMain_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.LWin)
+            {
+                keyWIN = false;
+            }
+            else if (e.KeyCode == Keys.L)
+            {
+                keyL = false;
             }
         }
     }
