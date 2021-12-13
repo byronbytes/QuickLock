@@ -5,4 +5,7 @@
 **Lock your computer quickly with one button.**
 
 ## Intentions
-  Sometimes locking your computer can take a long time if you have a tight schedeule or don't want to navigate menus. QuickLock solves all these problems by having an easy to reach lock button and an always-ready keybind to lock Windows by doing `WIN + L`
+Sometimes locking your computer can take a long time if you have a tight schedeule or don't want to navigate Windows's menus. QuickLock solves all these problems by having an easy to click lock button and an always-ready keybind to lock Windows by doing `WIN + L`.
+   
+## List Of Features
+   
