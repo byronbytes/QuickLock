@@ -9,3 +9,6 @@ Sometimes locking your computer can take a long time if you have a tight schedeu
    
 ## List Of Features
    
+- QuickLock
+   - Lock your computer with one button
+   - Use WIN + L as an alternative.
