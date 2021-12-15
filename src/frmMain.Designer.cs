@@ -41,6 +41,8 @@ namespace QuickLock
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.trueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.falseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,11 +79,13 @@ namespace QuickLock
             // 
             // giveWarningMessageToolStripMenuItem
             // 
+            this.giveWarningMessageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trueToolStripMenuItem,
+            this.falseToolStripMenuItem});
             this.giveWarningMessageToolStripMenuItem.Name = "giveWarningMessageToolStripMenuItem";
             this.giveWarningMessageToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.giveWarningMessageToolStripMenuItem.Text = "Give Warning Message";
-            this.giveWarningMessageToolStripMenuItem.Click += new System.EventHandler(this.giveWarningMessageToolStripMenuItem_Click);
-            // 
+            //
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -133,6 +137,20 @@ namespace QuickLock
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // trueToolStripMenuItem
+            // 
+            this.trueToolStripMenuItem.Name = "trueToolStripMenuItem";
+            this.trueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trueToolStripMenuItem.Text = "True";
+            this.trueToolStripMenuItem.Click += new System.EventHandler(this.trueToolStripMenuItem_Click);
+            // 
+            // falseToolStripMenuItem
+            // 
+            this.falseToolStripMenuItem.Name = "falseToolStripMenuItem";
+            this.falseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.falseToolStripMenuItem.Text = "False";
+            this.falseToolStripMenuItem.Click += new System.EventHandler(this.falseToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -172,6 +190,8 @@ namespace QuickLock
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem falseToolStripMenuItem;
     }
 }
 

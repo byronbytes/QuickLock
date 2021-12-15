@@ -25,7 +25,6 @@ namespace QuickLock
             {
                 MessageBox.Show("Please save your work before continuing. Clicking OK will lock your computer.");
             }
-
             Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
 
@@ -58,25 +57,6 @@ namespace QuickLock
                 keyCTRL = false;
             }
         }
-
-        private void giveWarningMessageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            giveWarningMessageToolStripMenuItem.Checked = true;
-
-            if (giveWarningMessageToolStripMenuItem.Checked == true)
-            {
-                Properties.Settings.Default.WarningMessage = true;
-                Properties.Settings.Default.Save();
-
-            }
-
-            if (giveWarningMessageToolStripMenuItem.Checked == false)
-            {
-                Properties.Settings.Default.WarningMessage = false;
-                Properties.Settings.Default.Save();
-            }
-        }
-        
         
         private void SlideToShutdown()
         {
@@ -145,5 +125,29 @@ namespace QuickLock
 
         }
 
+        private void trueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trueToolStripMenuItem.Checked = true;
+            Properties.Settings.Default.WarningMessage = true;
+            Properties.Settings.Default.Save();
+
+            if(falseToolStripMenuItem.Checked == true)
+            {
+                falseToolStripMenuItem.Checked = false;
+            }
+        }
+
+        private void falseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            falseToolStripMenuItem.Checked = true;
+            Properties.Settings.Default.WarningMessage = false;
+            Properties.Settings.Default.Save();
+
+
+            if (trueToolStripMenuItem.Checked == true)
+            {
+                trueToolStripMenuItem.Checked = false;
+            }
+        }
     }
 }
