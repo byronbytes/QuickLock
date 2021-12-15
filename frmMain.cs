@@ -41,7 +41,6 @@ namespace QuickLock
             {
                 Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
             }
-               
         }
 
         bool keyL = false;
@@ -81,7 +80,7 @@ namespace QuickLock
         
         private void SlideToShutdown()
         {
-         Process.Start(@"C:\Windows\system32\SlideToShutdown.exe");
+           Process.Start(@"C:\Windows\system32\SlideToShutdown.exe");
         }
         
         private void SleepAndLock()
