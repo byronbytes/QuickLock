@@ -80,7 +80,7 @@ namespace QuickLock
         
         private void SlideToShutdown()
         {
-         Process.Start("");
+         Process.Start(@"C:\Windows\system32\SlideToShutdown.exe");
         }
         
         private void SleepAndLock()
