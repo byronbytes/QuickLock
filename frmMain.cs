@@ -36,7 +36,7 @@ namespace QuickLock
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (keyL && keyWIN)
+            if (keyL && keyCTRL)
             {
                 Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
             }
@@ -50,7 +50,7 @@ namespace QuickLock
         {
             if (e.KeyCode == Keys.LCTRL)
             {
-                    keyCTRL = true;
+                keyCTRL = true;
             }
             else if (e.KeyCode == Keys.L)
             {
@@ -75,6 +75,17 @@ namespace QuickLock
         {
             Properties.Settings.Default.WarningMessage = true;
             Properties.Settings.Default.Save();
+        }
+        
+        
+        private void SlideToShutdown()
+        {
+         Process.Start("");
+        }
+        
+        private void SleepAndLock()
+        {
+        
         }
     }
 }
