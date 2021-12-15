@@ -32,11 +32,12 @@ namespace QuickLock
         private void frmMain_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (keyL && keyCTRL)
+            if (keyL && keyCTRL == true)
             {
                 Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
             }
