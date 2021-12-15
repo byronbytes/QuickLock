@@ -48,7 +48,7 @@ namespace QuickLock
 
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.LCTRL)
+            if (e.KeyCode == Keys.LControlKey)
             {
                 keyCTRL = true;
             }
@@ -61,7 +61,7 @@ namespace QuickLock
         private void frmMain_KeyUp(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyCode == Keys.LCTRL)
+            if (e.KeyCode == Keys.LControlKey)
             {
                 keyCTRL = false;
             }
@@ -73,8 +73,32 @@ namespace QuickLock
 
         private void giveWarningMessageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.WarningMessage = true;
-            Properties.Settings.Default.Save();
+            bool enabled = true;
+
+            giveWarningMessageToolStripMenuItem.Checked = true;
+
+            if (giveWarningMessageToolStripMenuItem.Checked == true)
+            {
+                enabled = true;
+              
+            }
+
+            if (giveWarningMessageToolStripMenuItem.Checked == false)
+            {
+                enabled = false;
+            }
+
+            if (enabled == true)
+            {
+                Properties.Settings.Default.WarningMessage = true;
+                Properties.Settings.Default.Save();
+            }
+
+            if(enabled == false)
+            {
+                Properties.Settings.Default.WarningMessage = false;
+                Properties.Settings.Default.Save();
+            }
         }
         
         
@@ -83,9 +107,10 @@ namespace QuickLock
            Process.Start(@"C:\Windows\system32\SlideToShutdown.exe");
         }
         
-        private void SleepAndLock()
+
+        private void button2_Click(object sender, EventArgs e)
         {
-        
+            Application.SetSuspendState(PowerState.Suspend, true, true);
         }
     }
 }
