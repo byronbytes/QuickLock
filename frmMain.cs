@@ -44,13 +44,13 @@ namespace QuickLock
         }
 
         bool keyL = false;
-        bool keyWIN = false;
+        bool keyCTRL = false;
 
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.LWin)
+            if (e.KeyCode == Keys.LCTRL)
             {
-                    keyWIN = true;
+                    keyCTRL = true;
             }
             else if (e.KeyCode == Keys.L)
             {
@@ -61,9 +61,9 @@ namespace QuickLock
         private void frmMain_KeyUp(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyCode == Keys.LWin)
+            if (e.KeyCode == Keys.LCTRL)
             {
-                keyWIN = false;
+                keyCTRL = false;
             }
             else if (e.KeyCode == Keys.L)
             {
