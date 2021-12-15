@@ -31,70 +31,47 @@ namespace QuickLock
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            timer1.Start();
-            timer1.Enabled = true;
+
         }
+
+        bool keyCTRL;
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (keyL && keyCTRL == true)
+            if (keyCTRL == true)
             {
                 Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
             }
         }
 
-        bool keyL = false;
-        bool keyCTRL = false;
-
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.LControlKey)
+            if (e.KeyCode == Keys.Control)
             {
                 keyCTRL = true;
-            }
-            else if (e.KeyCode == Keys.L)
-            {
-                keyL = true;
             }
         }
 
         private void frmMain_KeyUp(object sender, KeyEventArgs e)
         {
-
-            if (e.KeyCode == Keys.LControlKey)
+            if (e.KeyCode == Keys.Control)
             {
                 keyCTRL = false;
-            }
-            else if (e.KeyCode == Keys.L)
-            {
-                keyL = false;
             }
         }
 
         private void giveWarningMessageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool enabled = true;
-
             giveWarningMessageToolStripMenuItem.Checked = true;
 
             if (giveWarningMessageToolStripMenuItem.Checked == true)
             {
-                enabled = true;
-              
+                Properties.Settings.Default.WarningMessage = true;
+                Properties.Settings.Default.Save();
+
             }
 
             if (giveWarningMessageToolStripMenuItem.Checked == false)
-            {
-                enabled = false;
-            }
-
-            if (enabled == true)
-            {
-                Properties.Settings.Default.WarningMessage = true;
-                Properties.Settings.Default.Save();
-            }
-
-            if(enabled == false)
             {
                 Properties.Settings.Default.WarningMessage = false;
                 Properties.Settings.Default.Save();
@@ -110,7 +87,64 @@ namespace QuickLock
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.WarningMessage == true)
+            {
+                MessageBox.Show("Please save your work before continuing. Clicking OK will lock your computer.");
+            }
             Application.SetSuspendState(PowerState.Suspend, true, true);
         }
+
+        private void darkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Theme = "dark";
+            ThemeSet();
+            Properties.Settings.Default.Save();
+        }
+
+        private void lightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Theme = "light";
+            ThemeSet();
+            Properties.Settings.Default.Save();
+        }
+
+        private void ThemeSet()
+        {
+            if(Properties.Settings.Default.Theme == "dark")
+            {
+                this.BackColor = Color.Black;
+                toolStripMenuItem1.BackColor = Color.Gray;
+                lightToolStripMenuItem.BackColor = Color.Gray;
+                darkToolStripMenuItem.BackColor = Color.Gray;
+                optionsToolStripMenuItem.BackColor = Color.Gray;
+                giveWarningMessageToolStripMenuItem.BackColor = Color.Gray;
+                menuStrip1.ForeColor = Color.White;
+                menuStrip1.BackColor = Color.Black;
+                label1.ForeColor = Color.White;
+                button1.BackColor = Color.Black;
+                button1.ForeColor = Color.Maroon;
+                button2.BackColor = Color.Black;
+                button2.ForeColor = Color.Maroon;
+            }
+
+            if (Properties.Settings.Default.Theme == "light")
+            {
+                this.BackColor = Color.White;
+                toolStripMenuItem1.BackColor = Color.WhiteSmoke;
+                lightToolStripMenuItem.BackColor = Color.WhiteSmoke;
+                darkToolStripMenuItem.BackColor = Color.WhiteSmoke;
+                optionsToolStripMenuItem.BackColor = Color.WhiteSmoke;
+                giveWarningMessageToolStripMenuItem.BackColor = Color.WhiteSmoke;
+                menuStrip1.ForeColor = Color.Black;
+                menuStrip1.BackColor = Color.White;
+                label1.ForeColor = Color.Black;
+                button1.BackColor = Color.White;
+                button1.ForeColor = Color.Maroon;
+                button2.BackColor = Color.White;
+                button2.ForeColor = Color.Maroon;
+            }
+
+        }
+
     }
 }
