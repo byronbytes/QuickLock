@@ -23,7 +23,7 @@ namespace QuickLock
         {
             if (Properties.Settings.Default.WarningMessage == true)
             {
-                MessageBox.Show("Please save your work before continuing. Clicking OK will lock your computer.");
+                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.");
             }
             Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
@@ -57,18 +57,12 @@ namespace QuickLock
                 keyCTRL = false;
             }
         }
-        
-        private void SlideToShutdown()
-        {
-           Process.Start(@"C:\Windows\system32\SlideToShutdown.exe");
-        }
-        
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.WarningMessage == true)
             {
-                MessageBox.Show("Please save your work before continuing. Clicking OK will lock your computer.");
+                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.");
             }
             Application.SetSuspendState(PowerState.Suspend, true, true);
         }
@@ -142,7 +136,6 @@ namespace QuickLock
             falseToolStripMenuItem.Checked = true;
             Properties.Settings.Default.WarningMessage = false;
             Properties.Settings.Default.Save();
-
 
             if (trueToolStripMenuItem.Checked == true)
             {
