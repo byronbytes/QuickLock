@@ -13,6 +13,6 @@ Sometimes locking your computer can take a long time if you have a tight schedeu
    - Lock your computer with one button.
    - Customizable settings so you can get a warning before locking.
    - Ability to make the computer sleep and lock.
-   - (Coming soon) Keybind to lock the computer.
-   - Customizable themes!
+   - Customizable themes.
+   - A keybind to immediately lock the computer (WIP)
    - Lightweight and easy to use!
