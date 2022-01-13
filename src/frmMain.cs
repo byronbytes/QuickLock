@@ -57,13 +57,6 @@ namespace QuickLock
                 keyCTRL = false;
             }
         }
-        
-        private void SlideToShutdown()
-        {
-           Process.Start(@"C:\Windows\system32\SlideToShutdown.exe");
-        }
-        
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.WarningMessage == true)
