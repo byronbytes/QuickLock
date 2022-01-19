@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // Todo: Add try statements for next update.
+// Idea: Logoff method as well.
 
 namespace QuickLock
 {
@@ -30,24 +31,6 @@ namespace QuickLock
             Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-     
-        }
-
-        private void frmMain_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void frmMain_KeyUp(object sender, KeyEventArgs e)
-        {
-            
-        }
         private void button2_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.WarningMessage == true)
@@ -132,5 +115,6 @@ namespace QuickLock
                 trueToolStripMenuItem.Checked = false;
             }
         }
+
     }
 }
