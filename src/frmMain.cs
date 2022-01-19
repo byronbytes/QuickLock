@@ -32,7 +32,7 @@ namespace QuickLock
         {
             if (Properties.Settings.Default.WarningMessage == true)
             {
-                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.");
+                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.", "QuickLock");
             }
             Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
@@ -41,7 +41,7 @@ namespace QuickLock
         {
             if (Properties.Settings.Default.WarningMessage == true)
             {
-                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.");
+                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.", "QuickLock");
             }
             Application.SetSuspendState(PowerState.Suspend, true, true);
         }
