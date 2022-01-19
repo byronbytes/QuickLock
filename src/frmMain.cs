@@ -27,7 +27,15 @@ namespace QuickLock
             {
                 MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.");
             }
-            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            try
+            {
+                Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            }
+            catch
+            {
+                MessageBox("There was an error attempting to lock your computer.");
+            }
+            
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -54,7 +62,15 @@ namespace QuickLock
             {
                 MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.");
             }
-            Application.SetSuspendState(PowerState.Suspend, true, true);
+            try
+            {
+                Application.SetSuspendState(PowerState.Suspend, true, true);
+            }
+            catch
+            {
+                MessageBox.Show("There was an error locking your computer.");
+            }
+            
         }
 
         private void darkToolStripMenuItem_Click(object sender, EventArgs e)
