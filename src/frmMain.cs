@@ -20,7 +20,13 @@ namespace QuickLock
         public frmMain()
         {
             InitializeComponent();
+            ThemeSet();
         }
+
+        // Next release will hopefully add custom lock keybind and settings.
+
+        public bool LockKey;
+
 
         private void button1_Click(object sender, EventArgs e)
         {
