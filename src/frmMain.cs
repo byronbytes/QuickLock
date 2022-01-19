@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// Todo: Add try statements for next update.
+
 namespace QuickLock
 {
     public partial class frmMain : Form
@@ -32,30 +34,19 @@ namespace QuickLock
         {
         }
 
-        bool keyCTRL;
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (keyCTRL == true)
-            {
-                Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
-            }
+     
         }
 
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Control)
-            {
-                keyCTRL = true;
-            }
+
         }
 
         private void frmMain_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Control)
-            {
-                keyCTRL = false;
-            }
+            
         }
         private void button2_Click(object sender, EventArgs e)
         {
