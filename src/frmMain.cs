@@ -23,9 +23,13 @@ namespace QuickLock
             ThemeSet();
         }
 
-        // Next release will hopefully add custom lock keybind and settings.
-
+        // Next release will hopefully add keybind locking.
         public bool LockKey;
+
+        public string mode = "";
+        public string lock = "Lock";
+        public string sleeplock = "Sleep and Lock";
+        public string logout = "Log Out";
 
 
         private void button1_Click(object sender, EventArgs e)
