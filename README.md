@@ -13,7 +13,7 @@ Sometimes locking your computer can take a long time if you have a tight schedeu
 - QuickLock
    - Lock your computer with one button.
    - Customizable settings so you can get a warning before locking.
-   - Ability to make the computer sleep and lock.
+   - Ability to make the computer sleep, lock, and logout with one button.
    - Customizable themes.
-   - A keybind to immediately lock the computer (WIP)
+   - A keybind to immediately lock the computer
    - Lightweight and easy to use!
