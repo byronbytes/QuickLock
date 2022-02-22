@@ -22,10 +22,9 @@ These are the supported versions of QuickLock. We will not fix vulnerabilities i
 
 | Version             | Supported          | Release Date         | Discontinuation Date | Version Type |
 | :------------------ | :----------------: | :--------------:     | :------------------: | :------------------: | 
-| **2.1.0**           | :x:                | 22nd October, 2021    | 1st January, 2022   | Release |
-| **2.0.0**           | :x:                 | 20th September, 2021 |  14th December, 2021   | Release |
-| **2.0.0 PRE**       | :x:                 | 7th August, 2021     | 31st November 2021   | Pre - Release |
-| **1.x.x**           | :x:                | 24th July, 2021      | 7th August 2021      | Legacy |
-| **0.x.x**           | :x:                | Unknown Date         | 7th August 2021      | Legacy |
+| **1.2.1**           | ✅                 | 13th January, 2021 |  31st March, 2022   | Release |
+| **1.2.0**           | ✅                 | 15th December, 2021     | 31st March, 2022   | Release |
+| **1.1.0**           | :x:                | 11th December, 2021      | 1st January, 2022      | Release |
+| **1.0.0**           | :x:                | 11th December, 2021         | 1st January, 2022      | Release |
 
 *Legend: ✅ = Supported | :x: = Unsupported | ⚠️ = Unsupported Soon*
