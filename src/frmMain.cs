@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Todo: Add try statements for next update.
 // Idea: Logoff method as well.
 
 namespace QuickLock
@@ -28,6 +27,9 @@ namespace QuickLock
         }
 
         private GlobalKeyboardHook _globalKeyboardHook;
+       public string Boxmessage = "Clicking OK will lock the computer, make sure to save any unsaved work.";
+       public string Boxtitle = "QuickLock";
+       MessageBoxButtons buttons = MessageBoxButtons.YesNo;
 
         public void SetupKeyboardHooks()
         {
@@ -38,8 +40,9 @@ namespace QuickLock
         private void OnKeyPressed(object sender, GlobalKeyboardHookEventArgs e)
         {
 
-            if (e.KeyboardData.VirtualCode != GlobalKeyboardHook.VkControl)
+            if (e.KeyboardData.VirtualCode == GlobalKeyboardHook.VkControl)
                 return;
+
 
             if (e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
@@ -48,7 +51,6 @@ namespace QuickLock
                     MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.", "QuickLock");
                 }
                 Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
-
                 e.Handled = true;
             }
         }
@@ -176,6 +178,10 @@ namespace QuickLock
 }
 
 // Beyond this point is the Global Keyboard system so it detects the CTRL key being pressed.
+
+
+
+
 class GlobalKeyboardHookEventArgs : HandledEventArgs
 {
     public GlobalKeyboardHook.KeyboardState KeyboardState { get; private set; }
@@ -199,7 +205,7 @@ class GlobalKeyboardHook : IDisposable
     {
         _windowsHookHandle = IntPtr.Zero;
         _user32LibraryHandle = IntPtr.Zero;
-        _hookProc = LowLevelKeyboardProc; // we must keep alive _hookProc, because GC is not aware about SetWindowsHookEx behaviour.
+        _hookProc = LowLevelKeyboardProc;
 
         _user32LibraryHandle = LoadLibrary("User32");
         if (_user32LibraryHandle == IntPtr.Zero)
@@ -222,7 +228,6 @@ class GlobalKeyboardHook : IDisposable
     {
         if (disposing)
         {
-            // because we can unhook only in the same thread, not in garbage collector thread
             if (_windowsHookHandle != IntPtr.Zero)
             {
                 if (!UnhookWindowsHookEx(_windowsHookHandle))
@@ -231,8 +236,6 @@ class GlobalKeyboardHook : IDisposable
                     throw new Win32Exception(errorCode, $"Failed to remove keyboard hooks for '{Process.GetCurrentProcess().ProcessName}'. Error {errorCode}: {new Win32Exception(Marshal.GetLastWin32Error()).Message}.");
                 }
                 _windowsHookHandle = IntPtr.Zero;
-
-                // ReSharper disable once DelegateSubtraction
                 _hookProc -= LowLevelKeyboardProc;
             }
         }
@@ -344,7 +347,8 @@ class GlobalKeyboardHook : IDisposable
         SysKeyUp = 0x0105
     }
 
-    public const int VkSnapshot = 0x2c;
+    // I can add as many keys as I want.
+    // https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
     public const int VkL = 0x4C;
     public const int VkControl = 0xA2;
     const int KfAltdown = 0x2000;

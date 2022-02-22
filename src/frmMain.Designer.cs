@@ -48,13 +48,13 @@ namespace QuickLock
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(76, 67);
+            this.button1.Location = new System.Drawing.Point(96, 67);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(384, 110);
+            this.button1.Size = new System.Drawing.Size(362, 110);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Lock";
+            this.button1.Text = "Lock PC";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -89,14 +89,14 @@ namespace QuickLock
             // trueToolStripMenuItem
             // 
             this.trueToolStripMenuItem.Name = "trueToolStripMenuItem";
-            this.trueToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.trueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.trueToolStripMenuItem.Text = "True";
             this.trueToolStripMenuItem.Click += new System.EventHandler(this.trueToolStripMenuItem_Click);
             // 
             // falseToolStripMenuItem
             // 
             this.falseToolStripMenuItem.Name = "falseToolStripMenuItem";
-            this.falseToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.falseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.falseToolStripMenuItem.Text = "False";
             this.falseToolStripMenuItem.Click += new System.EventHandler(this.falseToolStripMenuItem_Click);
             // 
@@ -132,6 +132,7 @@ namespace QuickLock
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(12, 236);
             this.label1.Name = "label1";
@@ -141,11 +142,11 @@ namespace QuickLock
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Maroon;
-            this.button2.Location = new System.Drawing.Point(387, 215);
+            this.button2.Location = new System.Drawing.Point(367, 210);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 40);
+            this.button2.Size = new System.Drawing.Size(184, 45);
             this.button2.TabIndex = 3;
             this.button2.Text = "Sleep and Lock";
             this.button2.UseVisualStyleBackColor = true;
