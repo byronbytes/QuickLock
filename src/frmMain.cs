@@ -23,8 +23,8 @@ namespace QuickLock
             ThemeSet();
         }
 
-        // Next release will hopefully add keybind locking.
-        public bool LockKey;
+        public static bool LockKey;
+        public static string KeyBind;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -58,6 +58,31 @@ namespace QuickLock
             Properties.Settings.Default.Save();
         }
 
+        private void trueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trueToolStripMenuItem.Checked = true;
+            Properties.Settings.Default.WarningMessage = true;
+            Properties.Settings.Default.Save();
+
+            if(falseToolStripMenuItem.Checked == true)
+            {
+                falseToolStripMenuItem.Checked = false;
+            }
+        }
+
+        private void falseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            falseToolStripMenuItem.Checked = true;
+            Properties.Settings.Default.WarningMessage = false;
+            Properties.Settings.Default.Save();
+
+            if (trueToolStripMenuItem.Checked == true)
+            {
+                trueToolStripMenuItem.Checked = false;
+            }
+        }
+        
+        
         private void ThemeSet()
         {
             if(Properties.Settings.Default.Theme == "dark")
@@ -96,29 +121,6 @@ namespace QuickLock
 
         }
 
-        private void trueToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            trueToolStripMenuItem.Checked = true;
-            Properties.Settings.Default.WarningMessage = true;
-            Properties.Settings.Default.Save();
-
-            if(falseToolStripMenuItem.Checked == true)
-            {
-                falseToolStripMenuItem.Checked = false;
-            }
-        }
-
-        private void falseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            falseToolStripMenuItem.Checked = true;
-            Properties.Settings.Default.WarningMessage = false;
-            Properties.Settings.Default.Save();
-
-            if (trueToolStripMenuItem.Checked == true)
-            {
-                trueToolStripMenuItem.Checked = false;
-            }
-        }
 
     }
 }
