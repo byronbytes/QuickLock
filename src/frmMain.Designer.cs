@@ -83,7 +83,7 @@ namespace QuickLock
             this.trueToolStripMenuItem,
             this.falseToolStripMenuItem});
             this.giveWarningMessageToolStripMenuItem.Name = "giveWarningMessageToolStripMenuItem";
-            this.giveWarningMessageToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.giveWarningMessageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.giveWarningMessageToolStripMenuItem.Text = "Warning Message";
             // 
             // trueToolStripMenuItem
@@ -127,6 +127,7 @@ namespace QuickLock
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
             // 
@@ -168,6 +169,8 @@ namespace QuickLock
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuickLock";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmMain_KeyPress);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
