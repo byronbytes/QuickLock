@@ -6,10 +6,10 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Company>LiteTools</Company>
     <Authors>Matty</Authors>
-    <Version>1.2.1</Version>
+    <Version>1.3.0</Version>
     <Description>Sometimes locking your computer can take a long time if you have a tight schedeule or don't want to navigate Windows's menus. QuickLock solves all these problems by having an easy to click lock button.</Description>
     <ApplicationIcon>QuickLock New.ico</ApplicationIcon>
-    <Copyright>(c) LiteTools 2021</Copyright>
+    <Copyright>(c) LiteTools 2022</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
