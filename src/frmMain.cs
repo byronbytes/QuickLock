@@ -27,9 +27,6 @@ namespace QuickLock
         }
 
         private GlobalKeyboardHook _globalKeyboardHook;
-       public string Boxmessage = "Clicking OK will lock the computer, make sure to save any unsaved work.";
-       public string Boxtitle = "QuickLock";
-       MessageBoxButtons buttons = MessageBoxButtons.YesNo;
 
         public void SetupKeyboardHooks()
         {
@@ -54,6 +51,7 @@ namespace QuickLock
                 e.Handled = true;
             }
         }
+
 
         public void Disposer()
         {
@@ -155,24 +153,6 @@ namespace QuickLock
                 button2.ForeColor = Color.Maroon;
             }
 
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmMain_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void frmMain_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.LControlKey)
-            {
-                Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
-            }
         }
     }
 }
