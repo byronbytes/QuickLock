@@ -37,7 +37,7 @@ namespace QuickLock
         private void OnKeyPressed(object sender, GlobalKeyboardHookEventArgs e)
         {
 
-            if (e.KeyboardData.VirtualCode == GlobalKeyboardHook.VkControl)
+            if (e.KeyboardData.VirtualCode != GlobalKeyboardHook.VkControl)
                 return;
 
 
