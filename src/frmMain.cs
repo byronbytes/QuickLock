@@ -157,7 +157,7 @@ namespace QuickLock
     }
 }
 
-// Beyond this point is the Global Keyboard system so it detects the CTRL key being pressed.
+// Beyond this point is the Global Keyboard system so it detects the CTRL and L key being pressed.
 
 
 
@@ -331,7 +331,7 @@ class GlobalKeyboardHook : IDisposable
     // https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
     public const int VkL = 0x4C;
     public const int VkControl = 0xA2;
-    const int KfAltdown = 0x2000;
+    public const int KfAltdown = 0x2000;
     public const int LlkhfAltdown = (KfAltdown >> 8);
 
     public IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam)
