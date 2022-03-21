@@ -29,7 +29,6 @@ namespace QuickLock
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,14 +42,11 @@ namespace QuickLock
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -161,6 +157,7 @@ namespace QuickLock
             this.label2.Size = new System.Drawing.Size(166, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Current Keybind: CTRL";
+            this.label2.Visible = false;
             // 
             // button1
             // 
@@ -170,6 +167,7 @@ namespace QuickLock
             this.button1.TabIndex = 2;
             this.button1.Text = "Rebind";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // pictureBox1
             // 
@@ -190,19 +188,6 @@ namespace QuickLock
             this.label3.Size = new System.Drawing.Size(233, 25);
             this.label3.TabIndex = 11;
             this.label3.Text = "What would you like to do?";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(217, 26);
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.addToolStripMenuItem.Text = "Create Executable Shortcut";
             // 
             // button3
             // 
@@ -250,7 +235,6 @@ namespace QuickLock
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,8 +253,6 @@ namespace QuickLock
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
