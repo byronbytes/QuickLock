@@ -76,7 +76,7 @@ namespace QuickLock
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 586);
+            this.panel1.Size = new System.Drawing.Size(239, 586);
             this.panel1.TabIndex = 10;
             // 
             // groupBox1
@@ -114,6 +114,7 @@ namespace QuickLock
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Off";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -163,9 +164,9 @@ namespace QuickLock
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(17, 331);
+            this.button1.Location = new System.Drawing.Point(18, 331);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 25);
+            this.button1.Size = new System.Drawing.Size(161, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "Rebind";
             this.button1.UseVisualStyleBackColor = true;

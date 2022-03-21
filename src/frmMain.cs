@@ -11,8 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Idea: Logoff method as well.
-
 namespace QuickLock
 {
     public partial class frmMain : Form
@@ -21,6 +19,7 @@ namespace QuickLock
         {
             InitializeComponent();
             ThemeSet();
+            WarningSet();
             this.KeyPreview = true;
             SetupKeyboardHooks();
         }
@@ -51,27 +50,31 @@ namespace QuickLock
             }
         }
 
-
-        public void Disposer()
+        private void WarningSet()
         {
-            _globalKeyboardHook?.Dispose();
+            if (Properties.Settings.Default.WarningMessage == true)
+            {
+                radioButton1.Checked = true;
+            }
+
+            if (Properties.Settings.Default.WarningMessage == false)
+            {
+                radioButton2.Checked = true;
+            }
         }
-
-
-
-
         private void ThemeSet()
         {
             if (Properties.Settings.Default.Theme == "dark")
             {
-
+                panel1.BackColor = Color.Gray;
+                radioButton4.Checked = true;
             }
 
             if (Properties.Settings.Default.Theme == "light")
             {
-
+                panel1.BackColor = Color.White;
+                radioButton3.Checked = true;
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -94,7 +97,8 @@ namespace QuickLock
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            Properties.Settings.Default.WarningMessage = true;
+            Properties.Settings.Default.Save();
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -109,6 +113,17 @@ namespace QuickLock
             Properties.Settings.Default.Theme = "light";
             ThemeSet();
             Properties.Settings.Default.Save();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.WarningMessage = false;
+            Properties.Settings.Default.Save();
+        }
+
+        public void Disposer()
+        {
+            _globalKeyboardHook?.Dispose();
         }
     }
 }
