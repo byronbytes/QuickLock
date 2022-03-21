@@ -23,6 +23,7 @@ namespace QuickLock
             ThemeSet();
             this.KeyPreview = true;
             SetupKeyboardHooks();
+           
 
         }
 
@@ -62,11 +63,14 @@ namespace QuickLock
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.WarningMessage == true)
-            {
-                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.", "QuickLock");
-            }
-            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            src.newmenudraft NewMenu = new src.newmenudraft();
+            NewMenu.Show();
+
+          //  if (Properties.Settings.Default.WarningMessage == true)
+          //  {
+          //      MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.", "QuickLock");
+         //   }
+          //  Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
 
         private void button2_Click(object sender, EventArgs e)
