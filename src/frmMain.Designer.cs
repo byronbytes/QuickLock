@@ -45,6 +45,7 @@ namespace QuickLock
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +65,7 @@ namespace QuickLock
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton4);
@@ -232,6 +234,17 @@ namespace QuickLock
             this.panel2.Size = new System.Drawing.Size(378, 586);
             this.panel2.TabIndex = 14;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(12, 560);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "v1.4.0";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -275,6 +288,7 @@ namespace QuickLock
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
     }
 }
 

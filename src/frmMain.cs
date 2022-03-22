@@ -72,6 +72,7 @@ namespace QuickLock
                 label2.ForeColor = Color.White;
                 label3.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
+                label5.ForeColor = Color.White;
                 button1.ForeColor = Color.Red;
                 button2.ForeColor = Color.Red;
                 button3.ForeColor = Color.Red;
@@ -93,6 +94,7 @@ namespace QuickLock
                 label2.ForeColor = Color.Black;
                 label3.ForeColor= Color.Black;
                 label4.ForeColor = Color.Black;
+                label5.ForeColor = Color.Black;
                 button1.BackColor = Color.FromArgb(200, 200, 200);
                 button2.BackColor = Color.FromArgb(200, 200, 200);
                 button3.BackColor= Color.FromArgb(200, 200, 200);
