@@ -66,14 +66,40 @@ namespace QuickLock
         {
             if (Properties.Settings.Default.Theme == "dark")
             {
-                panel1.BackColor = Color.Gray;
-                radioButton4.Checked = true;
+                panel2.BackColor = Color.FromArgb(12, 12, 12);
+                panel1.BackColor = Color.FromArgb(24,24,24);
+                label1.ForeColor = Color.White;
+                label2.ForeColor = Color.White;
+                label3.ForeColor = Color.White;
+                label4.ForeColor = Color.White;
+                button1.ForeColor = Color.Red;
+                button2.ForeColor = Color.Red;
+                button3.ForeColor = Color.Red;
+                radioButton1.ForeColor = Color.White;
+                radioButton2.ForeColor = Color.White;
+                radioButton3.ForeColor = Color.White;
+                radioButton4.ForeColor = Color.White;
+                button1.BackColor = Color.FromArgb(18,18,18);
+                button2.BackColor = Color.FromArgb(18, 18, 18);
+                button3.BackColor = Color.FromArgb(18, 18, 18);
+
             }
 
             if (Properties.Settings.Default.Theme == "light")
             {
                 panel1.BackColor = Color.White;
-                radioButton3.Checked = true;
+                panel2.BackColor = Color.GhostWhite;
+                label1.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
+                label3.ForeColor= Color.Black;
+                label4.ForeColor = Color.Black;
+                button1.BackColor = Color.FromArgb(200, 200, 200);
+                button2.BackColor = Color.FromArgb(200, 200, 200);
+                button3.BackColor= Color.FromArgb(200, 200, 200);
+                radioButton1.ForeColor = Color.Black;
+                radioButton2.ForeColor = Color.Black;
+                radioButton3.ForeColor = Color.Black;
+                radioButton4.ForeColor = Color.Black;
             }
         }
 
