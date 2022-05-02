@@ -1,4 +1,9 @@
-﻿using Microsoft.VisualBasic.Devices;
+/*
+    (c) LiteTools 2022 (https://github.com/LiteTools)
+    All rights reserved under the GNU General Public License v3.0.
+*/
+
+using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,8 +28,8 @@ namespace QuickLock
             this.KeyPreview = true;
             SetupKeyboardHooks();
         }
-
         private GlobalKeyboardHook _globalKeyboardHook;
+        public static string LockMessage "Clicking OK will lock the computer, make sure to save any unsaved work.";
 
         public void SetupKeyboardHooks()
         {
@@ -34,16 +39,14 @@ namespace QuickLock
 
         private void OnKeyPressed(object sender, GlobalKeyboardHookEventArgs e)
         {
-
             if (e.KeyboardData.VirtualCode != GlobalKeyboardHook.VkControl)
                 return;
-
-
+                
             if (e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown)
             {
                 if (Properties.Settings.Default.WarningMessage == true)
                 {
-                    MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.", "QuickLock");
+                    MessageBox.Show(LockMessage, "QuickLock");
                 }
                 Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
                 e.Handled = true;
@@ -109,7 +112,7 @@ namespace QuickLock
         {
             if (Properties.Settings.Default.WarningMessage == true)
             {
-                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.", "QuickLock");
+                MessageBox.Show(LockMessage, "QuickLock");
             }
             Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
@@ -118,7 +121,7 @@ namespace QuickLock
         {
             if (Properties.Settings.Default.WarningMessage == true)
             {
-                MessageBox.Show("Clicking OK will lock the computer, make sure to save any unsaved work.", "QuickLock");
+                MessageBox.Show(LockMessage, "QuickLock");
             }
             Application.SetSuspendState(PowerState.Suspend, true, true);
         }
@@ -156,10 +159,11 @@ namespace QuickLock
     }
 }
 
-// Beyond this point is the Global Keyboard system so it detects the CTRL and L key being pressed.
 
-
-
+/* 
+Beyond this point is the Global Keyboard system so it detects the CTRL and L key being pressed.
+Only touch this if you know what you are doing.
+*/
 
 class GlobalKeyboardHookEventArgs : HandledEventArgs
 {
