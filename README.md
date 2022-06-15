@@ -8,15 +8,13 @@ Sometimes locking your computer can take a long time if you have a tight schedeu
 ## Intentions
 We aim to make an application that makes locking easier and to protect unwanted users from accessing your computer. We are aware that there are many other ways to lock your computer, but our goal is to make an applicaton that does all of that in one tiny application.
    
-## List Of Features
+## Features
    
 - QuickLock
    - Lock your computer with one button.
    - Ability to make the computer sleep, lock, and logout with one button.
-   - A keybind to immediately lock the computer.
+   - A customizable bindable key to lock your computer.
+    - You can also choose the action it does.
+   - Disable the default Windows lock button.
    - Lightweight and easy to use!
-
-- Settings
-   - Change the theme of QuickLock.
-   - Add a warning before locking.
-   - Changing the lock bind (Coming Soon!)
+   - Customizable themes for a easier viewing experience.
