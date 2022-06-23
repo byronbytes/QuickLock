@@ -17,7 +17,14 @@ namespace QuickLock.src
             InitializeComponent();
         }
 
+        public const int CustomKey = 0xA2; // default keybind
         private void button1_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

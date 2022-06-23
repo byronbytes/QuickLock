@@ -46,7 +46,8 @@ namespace QuickLock.src
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 37);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(12, 49);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 38);
             this.button1.TabIndex = 1;
@@ -57,10 +58,11 @@ namespace QuickLock.src
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(153, 36);
+            this.textBox1.Location = new System.Drawing.Point(12, 106);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 39);
+            this.textBox1.Size = new System.Drawing.Size(135, 39);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // frmRebind
             // 
@@ -71,7 +73,7 @@ namespace QuickLock.src
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "frmRebind";
-            this.Text = "frmRebind";
+            this.Text = "Rebind";
             this.ResumeLayout(false);
             this.PerformLayout();
 
