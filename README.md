@@ -3,20 +3,25 @@
   <img alt="GitHub license" src="https://img.shields.io/github/license/litetools/QuickLock?style=flat-square"> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/QuickLock/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/QuickLock?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/QuickLock?style=flat-square">
 </h1>
 
-Sometimes locking your computer can take a long time if you have a tight schedeule, slow computer or don't want to navigate Windows's bloated menus. **QuickLock** solves all these problems by having an easy to click lock button and customizable settings.
+Sometimes locking your computer can take a long time if you have a tight schedeule, slow computer or you don't want to navigate Windows' bloated menus. **QuickLock** solves all these problems by having an easy to click lock button and ready to use keybind for any issues you may have.
 
 ## Intentions
+
 We aim to make an application that makes locking easier and to protect unwanted users from accessing your computer. We are aware that there are many other ways to lock your computer, but our goal is to make an applicaton that does all of that in one tiny application.
    
-## List Of Features
-   
-- QuickLock
-   - Lock your computer with one button.
-   - Ability to make the computer sleep, lock, and logout with one button.
-   - A keybind to immediately lock the computer.
-   - Lightweight and easy to use!
+## Features
 
-- Settings
-   - Change the theme of QuickLock.
-   - Add a warning before locking.
-   - Changing the lock bind (Coming Soon!)
+- Lock your computer with an easy on-screen button.
+- Ability to make the computer either sleep, lock, logout, hibernate, or shutdown.
+- An easy and bindable keybind to lock your computer anytime.
+   - You can also choose the action the keybind does in Settings.
+- Disable the built in Windows lock key (for QuickLock's)
+- Have custom lock messages.
+- (Coming Soon) Adapted Lock methods.
+- (Coming Soon) Lock timers.
+- Customizable themes for a better experience.
+- Lightweight and easy to use.
+
+## Gallery
+These screenshots were taken in (TBD).
+   
