@@ -7,7 +7,7 @@ Sometimes locking your computer can take a long time if you have a tight schedeu
 
 ## Intentions
 
-We aim to make an application that makes locking easier and to protect unwanted users from accessing your computer. We are aware that there are many other ways to lock your computer, but our goal is to make an applicaton that does all of that in one tiny application.
+I aim to make an application that makes locking easier and to protect unwanted users from accessing your computer. There are many other ways to lock your computer, but my goal is to make an applicaton that does all of that in one tiny application.
    
 ## Features
 
@@ -15,13 +15,14 @@ We aim to make an application that makes locking easier and to protect unwanted 
 - Ability to make the computer either sleep, lock, logout, hibernate, or shutdown.
 - An easy and bindable keybind to lock your computer anytime.
    - You can also choose the action the keybind does in Settings.
-- Disable the built in Windows lock key (for QuickLock's)
+- Disable the built in Windows lock key.
 - Have custom lock messages.
-- (Coming Soon) Adapted Lock methods.
-- (Coming Soon) Lock timers.
 - Customizable themes for a better experience.
 - Lightweight and easy to use.
 
 ## Gallery
-These screenshots were taken in (TBD).
+These screenshots were taken in v1.4
+
+[MainMenu](https://user-images.githubusercontent.com/53088136/222280844-3b2a8b15-984a-425e-85f5-167a3b7ab6d8.png)
+
    
